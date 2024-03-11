@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+:root {
+    --text-grey: #747A82;
+    --light-brown: #DDDDDD;
+    --bg-yellow: #F6F2EB;
+}
+
+* {
+    font-family: "Roboto Serif", serif;
+}
+
+p {
+    color: var(--text-grey);
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav,
+nav {
+    background-color: var(--bg-yellow);
+}
+
+.nav-logo {
+    translate: 0% 28%;
+    background: #fff;
+    z-index: 2;
+    background: var(--bg-yellow);
+}
+
+.nav-text:hover {
+
+    &::before {
+        content: "";
+        width: 75%;
+        height: 3px;
+        border-radius: 10px;
+        background-color: #C0304F;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+    }
+
+    &::after {
+        content: "";
+        width: 20%;
+        height: 3px;
+        background-color: #C0304F;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+//hero
+.hero {
+    background-color: var(--bg-yellow);
+
+    .row {
+        &>div:nth-child(1) {
+            order: 0;
+
+            &>div {
+                border: 1px solid var(--light-brown);
+                border-radius: 50% 50% 0 0;
+            }
+
+            .button-nav {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+
+                img {
+                    width: 50%;
+                    height: 50%;
+                }
+            }
+        }
+
+        &>div:nth-child(2) {
+            order: 4;
+        }
+
+        &>div:nth-child(3) {
+            order: 3;
+
+            &>div.statue {
+                border: 1px solid var(--light-brown);
+                border-radius: 50% 50% 0 0;
+            }
+        }
+    }
+
+    .donate {
+        .large-text {
+            font-size: 50px;
+            font-style: italic;
+        }
+
+        .separator {
+            width: 1px;
+            height: 80px;
+            background-color: var(--light-brown);
+        }
+
+        p {
+            max-width: 500px;
+        }
+
+        .donate-logo {
+            width: 150px;
+            top: -40%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:990px) {
+    .hero {
+        .row {
+            &>div:nth-child(2) {
+                order: 2;
+            }
+        }
+    }
+
+}
+
+//we call prince the lord
+.prince-the-lord {
+    .image {
+        flex-grow: 1;
+    }
+
+    .text {
+        flex-grow: 1;
+
+        h2 {
+            border-left: 5px solid rgb(184, 10, 10);
+            max-width: 400px;
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 2px dashed var(--light-brown);
+        }
+    }
+
+}
