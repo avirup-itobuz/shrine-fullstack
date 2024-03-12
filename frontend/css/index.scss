@@ -313,3 +313,14 @@ nav {
         }
     }
 }
+
+//members
+.members {
+    .text {
+        .title,
+        .para {
+            flex: 1;
+            max-width: 350px;
+        }
+    }
+}

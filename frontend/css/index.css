@@ -220,4 +220,10 @@ nav {
 }
 .grow-stronger .image .girl {
   height: 600px;
+}
+
+.members .text .title,
+.members .text .para {
+  flex: 1;
+  max-width: 350px;
 }/*# sourceMappingURL=index.css.map */
