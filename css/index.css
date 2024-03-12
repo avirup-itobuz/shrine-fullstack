@@ -2,7 +2,11 @@
 :root {
   --text-grey: #747A82;
   --light-brown: #DDDDDD;
-  --bg-yellow: #F6F2EB;
+  --bg-pink: #FFE6E0;
+}
+
+.border-left-red {
+  border-left: 5px solid rgb(184, 10, 10);
 }
 
 * {
@@ -103,10 +107,13 @@ nav {
   }
 }
 .prince-the-lord .image {
-  flex-grow: 1;
+  flex: 1;
+}
+.prince-the-lord .image img {
+  width: 100%;
 }
 .prince-the-lord .text {
-  flex-grow: 1;
+  flex: 1;
 }
 .prince-the-lord .text h2 {
   border-left: 5px solid rgb(184, 10, 10);
@@ -117,4 +124,100 @@ nav {
   height: 70px;
   border-radius: 50%;
   border: 2px dashed var(--light-brown);
+}
+
+.join-us {
+  background-color: var(--bg-pink);
+}
+.join-us .pictures div:nth-child(2) {
+  left: -10%;
+}
+.join-us .pictures div:nth-child(3) {
+  left: -20%;
+}
+.join-us .pictures div:nth-child(4) {
+  right: 2%;
+}
+.join-us .separator {
+  height: 80px;
+  width: 2px;
+  background-color: var(--light-brown);
+}
+.join-us .text {
+  max-width: 500px;
+}
+
+.faithful-heart > div {
+  flex: 1;
+}
+.faithful-heart .picture img {
+  max-width: 450px;
+}
+.faithful-heart .text .title {
+  border-left: 5px solid rgb(176, 22, 22);
+  max-width: 400px;
+}
+.faithful-heart .famous-quote {
+  border: 2px dashed black;
+  width: 180px;
+}
+.faithful-heart .martin::before {
+  content: url("../assets/home/faithfulHeart/quote.svg");
+  position: relative;
+  top: 0;
+}
+
+.potential > div {
+  flex: 1;
+}
+.potential p {
+  max-width: 450px;
+}
+.potential .title {
+  border-left: 5px solid rgb(188, 22, 22);
+}
+
+.satisfaction .text .title {
+  max-width: 350px;
+}
+.satisfaction .text p {
+  max-width: 500px;
+}
+.satisfaction .missions .mission p {
+  max-width: 200px;
+}
+.satisfaction .missions .mission .arrow {
+  border: 1px solid grey;
+  border-radius: 50%;
+}
+.satisfaction .missions .mission:hover {
+  background-color: var(--bg-pink);
+  border-radius: 50px 50px 50px 0px;
+}
+.satisfaction .missions .mission:hover .read-more {
+  display: block !important;
+}
+.satisfaction .missions .mission:hover .arrow {
+  background-color: #C0304F;
+}
+
+.grow-stronger > div {
+  flex: 1;
+}
+.grow-stronger .text .title {
+  max-width: 400px;
+}
+.grow-stronger .text .points span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.grow-stronger .image .hand {
+  left: -20%;
+  bottom: -20%;
+}
+.grow-stronger .image .girl {
+  height: 600px;
 }/*# sourceMappingURL=index.css.map */
