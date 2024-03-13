@@ -1,4 +1,3 @@
-// import { members, events, churchInfo } from "./data/homeData.js";
 
 //members
 document.addEventListener("DOMContentLoaded", async () => {
@@ -82,244 +81,254 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 //events
-// document.addEventListener("DOMContentLoaded", () => {
-//   const eventsWrapper = document.getElementsByClassName("eventsWrapper")[0];
-//   const eventsDiv = document.getElementById("eventsCarousel");
-//   const moveLeft = document.getElementById("left-arrow");
-//   const moveRight = document.getElementById("right-arrow");
+document.addEventListener("DOMContentLoaded", async () => {
+  const eventsWrapper = document.getElementsByClassName("eventsWrapper")[0];
+  const eventsDiv = document.getElementById("eventsCarousel");
+  const moveLeft = document.getElementById("left-arrow");
+  const moveRight = document.getElementById("right-arrow");
 
-//   events.forEach((event) => {
-//     // console.log(event);
-//     const eventsCard = document.createElement("div");
-//     eventsCard.classList.add(
-//       "event",
-//       "d-flex",
-//       "flex-column",
-//       "flex-md-row",
-//       "border",
-//       "rounded"
-//     );
+  const eventsData = await fetch(
+    "http://localhost:8000/api/homepage/eventsdata"
+  );
+  const events = await eventsData.json();
 
-//     const image = document.createElement("div");
-//     image.classList.add("text-center");
-//     const img = document.createElement("img");
-//     img.src = event.link;
-//     image.append(img);
-//     eventsCard.append(image);
+  events.forEach((event) => {
+    // console.log(event);
+    const eventsCard = document.createElement("div");
+    eventsCard.classList.add(
+      "event",
+      "d-flex",
+      "flex-column",
+      "flex-md-row",
+      "border",
+      "rounded"
+    );
 
-//     const info = document.createElement("div");
-//     info.classList.add(
-//       "d-flex",
-//       "flex-column",
-//       "justify-content-center",
-//       "align-items-start",
-//       "p-2",
-//       "gap-3"
-//     );
+    const image = document.createElement("div");
+    image.classList.add("text-center");
+    const img = document.createElement("img");
+    img.src = event.link;
+    image.append(img);
+    eventsCard.append(image);
 
-//     const date = document.createElement("div");
-//     date.classList.add("d-flex", "gap-2");
-//     const dateIcon = document.createElement("img");
-//     dateIcon.src = "assets/home/events/calendar.svg";
-//     const dateText = document.createElement("p");
-//     dateText.classList.add("text-nowrap", "mb-0");
-//     dateText.innerText = event.date;
-//     date.append(dateIcon, dateText);
-//     info.append(date);
+    const info = document.createElement("div");
+    info.classList.add(
+      "d-flex",
+      "flex-column",
+      "justify-content-center",
+      "align-items-start",
+      "p-2",
+      "gap-3"
+    );
 
-//     const venue = document.createElement("div");
-//     venue.classList.add("d-flex", "gap-2");
-//     const venueIcon = document.createElement("img");
-//     venueIcon.src = "assets/home/events/home.svg";
-//     const venueText = document.createElement("p");
-//     venueText.classList.add("text-nowrap", "mb-0");
-//     venueText.innerText = event.venue;
-//     venue.append(venueIcon, venueText);
-//     info.append(venue);
+    const date = document.createElement("div");
+    date.classList.add("d-flex", "gap-2");
+    const dateIcon = document.createElement("img");
+    dateIcon.src = "assets/home/events/calendar.svg";
+    const dateText = document.createElement("p");
+    dateText.classList.add("text-nowrap", "mb-0");
+    dateText.innerText = event.date;
+    date.append(dateIcon, dateText);
+    info.append(date);
 
-//     const time = document.createElement("div");
-//     time.classList.add("d-flex", "gap-2");
-//     const timeIcon = document.createElement("img");
-//     timeIcon.src = "assets/home/events/clock.svg";
-//     const timeText = document.createElement("p");
-//     timeText.classList.add("text-nowrap", "mb-0");
-//     timeText.innerText = event.time;
-//     time.append(timeIcon, timeText);
-//     info.append(time);
+    const venue = document.createElement("div");
+    venue.classList.add("d-flex", "gap-2");
+    const venueIcon = document.createElement("img");
+    venueIcon.src = "assets/home/events/home.svg";
+    const venueText = document.createElement("p");
+    venueText.classList.add("text-nowrap", "mb-0");
+    venueText.innerText = event.venue;
+    venue.append(venueIcon, venueText);
+    info.append(venue);
 
-//     const title = document.createElement("div");
-//     const titleText = document.createElement("h4");
-//     titleText.classList.add("text-nowrap");
-//     titleText.innerText = event.name;
-//     title.append(titleText);
-//     info.append(title);
+    const time = document.createElement("div");
+    time.classList.add("d-flex", "gap-2");
+    const timeIcon = document.createElement("img");
+    timeIcon.src = "assets/home/events/clock.svg";
+    const timeText = document.createElement("p");
+    timeText.classList.add("text-nowrap", "mb-0");
+    timeText.innerText = event.time;
+    time.append(timeIcon, timeText);
+    info.append(time);
 
-//     const about = document.createElement("div");
-//     const aboutText = document.createElement("p");
-//     aboutText.classList.add("mb-0");
-//     aboutText.innerText = event.about;
-//     about.append(aboutText);
-//     info.append(about);
+    const title = document.createElement("div");
+    const titleText = document.createElement("h4");
+    titleText.classList.add("text-nowrap");
+    titleText.innerText = event.name;
+    title.append(titleText);
+    info.append(title);
 
-//     const button = document.createElement("button");
-//     button.classList.add("border-0", "bg-dark", "text-white", "p-3", "rounded");
-//     button.innerText = "JOIN NOW";
-//     info.append(button);
+    const about = document.createElement("div");
+    const aboutText = document.createElement("p");
+    aboutText.classList.add("mb-0");
+    aboutText.innerText = event.about;
+    about.append(aboutText);
+    info.append(about);
 
-//     eventsCard.append(info);
-//     eventsDiv.append(eventsCard);
-//   });
+    const button = document.createElement("button");
+    button.classList.add("border-0", "bg-dark", "text-white", "p-3", "rounded");
+    button.innerText = "JOIN NOW";
+    info.append(button);
 
-//   const event = document.getElementsByClassName("eventsCarousel")[0];
-//   const width = event.clientWidth;
-//   console.log(width);
-//   let translate = 0;
-//   moveRight.addEventListener("click", () => {
-//     translate = translate - width / 2;
-//     console.log(translate);
-//     // eventsDiv.style.transform = `translateX(${translate}px)`;
-//     eventsWrapper.scrollBy({ left: width, behavior: "smooth" });
-//   });
-//   moveLeft.addEventListener("click", () => {
-//     translate = translate + width / 2;
-//     console.log(translate);
-//     // eventsDiv.style.transform = `translateX(${translate}px)`;
-//     eventsWrapper.scrollBy({ left: -width, behavior: "smooth" });
-//   });
-// });
+    eventsCard.append(info);
+    eventsDiv.append(eventsCard);
+  });
+
+  const event = document.getElementsByClassName("eventsCarousel")[0];
+  const width = event.clientWidth;
+  console.log(width);
+  let translate = 0;
+  moveRight.addEventListener("click", () => {
+    translate = translate - width / 2;
+    console.log(translate);
+    // eventsDiv.style.transform = `translateX(${translate}px)`;
+    eventsWrapper.scrollBy({ left: width, behavior: "smooth" });
+  });
+  moveLeft.addEventListener("click", () => {
+    translate = translate + width / 2;
+    console.log(translate);
+    // eventsDiv.style.transform = `translateX(${translate}px)`;
+    eventsWrapper.scrollBy({ left: -width, behavior: "smooth" });
+  });
+});
 
 // churches
-// document.addEventListener("DOMContentLoaded", function () {
-//   var currentPage = 1;
-//   var imagesPerPage = 3;
+document.addEventListener("DOMContentLoaded", async () => {
+  const churchData = await fetch(
+    "http://localhost:8000/api/homepage/churchdetails"
+  );
+  const churchInfo = await churchData.json();
 
-//   function displayImages(page) {
-//     var imageGrid = document.getElementById("image-grid");
-//     imageGrid.innerHTML = "";
-//     var start = (page - 1) * imagesPerPage;
-//     var end = start + imagesPerPage;
-//     for (var i = start; i < end && i < churchInfo.length; i++) {
-//       var div = document.createElement("div");
-//       div.className = "col-md-3 me-3 mb-4 card border-gray p-0 ";
+  var currentPage = 1;
+  var imagesPerPage = 3;
 
-//       var img = document.createElement("img");
-//       img.src = churchInfo[i].src;
-//       img.className = "card-img-top";
-//       div.appendChild(img);
+  function displayImages(page) {
+    var imageGrid = document.getElementById("image-grid");
+    imageGrid.innerHTML = "";
+    var start = (page - 1) * imagesPerPage;
+    var end = start + imagesPerPage;
+    for (var i = start; i < end && i < churchInfo.length; i++) {
+      var div = document.createElement("div");
+      div.className = "col-md-3 me-3 mb-4 card border-gray p-0 ";
 
-//       var cardBody = document.createElement("div");
-//       cardBody.className = "card-body";
+      var img = document.createElement("img");
+      img.src = churchInfo[i].src;
+      img.className = "card-img-top";
+      div.appendChild(img);
 
-//       var heading = document.createElement("h5");
-//       heading.className = "card-title";
-//       heading.textContent = churchInfo[i].heading;
-//       cardBody.appendChild(heading);
+      var cardBody = document.createElement("div");
+      cardBody.className = "card-body";
 
-//       var paragraph = document.createElement("p");
-//       paragraph.className = "card-text";
-//       paragraph.textContent = churchInfo[i].paragraph;
-//       cardBody.appendChild(paragraph);
+      var heading = document.createElement("h5");
+      heading.className = "card-title";
+      heading.textContent = churchInfo[i].heading;
+      cardBody.appendChild(heading);
 
-//       var smallImageDiv = document.createElement("div");
-//       smallImageDiv.className = "d-flex align-items-center";
+      var paragraph = document.createElement("p");
+      paragraph.className = "card-text";
+      paragraph.textContent = churchInfo[i].paragraph;
+      cardBody.appendChild(paragraph);
 
-//       var smallImage = document.createElement("img");
-//       smallImage.src = churchInfo[i].smallImageSrc;
-//       smallImage.className = "rounded-circle mr-2";
-//       smallImage.style.width = "50px";
-//       smallImage.style.height = "50px";
-//       smallImageDiv.appendChild(smallImage);
+      var smallImageDiv = document.createElement("div");
+      smallImageDiv.className = "d-flex align-items-center";
 
-//       var smallParagraph = document.createElement("p");
-//       smallParagraph.className = "card-text";
-//       smallParagraph.textContent = churchInfo[i].smallParagraph;
-//       smallImageDiv.appendChild(smallParagraph);
+      var smallImage = document.createElement("img");
+      smallImage.src = churchInfo[i].smallImageSrc;
+      smallImage.className = "rounded-circle mr-2";
+      smallImage.style.width = "50px";
+      smallImage.style.height = "50px";
+      smallImageDiv.appendChild(smallImage);
 
-//       cardBody.appendChild(smallImageDiv);
+      var smallParagraph = document.createElement("p");
+      smallParagraph.className = "card-text";
+      smallParagraph.textContent = churchInfo[i].smallParagraph;
+      smallImageDiv.appendChild(smallParagraph);
 
-//       div.appendChild(cardBody);
+      cardBody.appendChild(smallImageDiv);
 
-//       imageGrid.appendChild(div);
-//     }
-//   }
+      div.appendChild(cardBody);
 
-//   function displayPagination() {
-//     var totalPages = Math.ceil(churchInfo.length / imagesPerPage);
-//     var pagination = document.getElementById("pagination");
-//     pagination.innerHTML = "";
+      imageGrid.appendChild(div);
+    }
+  }
 
-//     // Previous Button
-//     var prevLi = document.createElement("li");
-//     prevLi.className = "page-item";
-//     var prevLink = document.createElement("a");
-//     prevLink.className = "page-link";
-//     prevLink.href = "#";
-//     prevLink.textContent = "<";
-//     prevLi.appendChild(prevLink);
-//     pagination.appendChild(prevLi);
+  function displayPagination() {
+    var totalPages = Math.ceil(churchInfo.length / imagesPerPage);
+    var pagination = document.getElementById("pagination");
+    pagination.innerHTML = "";
 
-//     // Next Button
-//     var nextLi = document.createElement("li");
-//     nextLi.className = "page-item";
-//     var nextLink = document.createElement("a");
-//     nextLink.className = "page-link";
-//     nextLink.href = "#";
-//     nextLink.textContent = ">";
-//     nextLi.appendChild(nextLink);
-//     pagination.appendChild(nextLi);
+    // Previous Button
+    var prevLi = document.createElement("li");
+    prevLi.className = "page-item";
+    var prevLink = document.createElement("a");
+    prevLink.className = "page-link";
+    prevLink.href = "#";
+    prevLink.textContent = "<";
+    prevLi.appendChild(prevLink);
+    pagination.appendChild(prevLi);
 
-//     for (var i = 1; i <= totalPages; i++) {
-//       var li = document.createElement("li");
-//       li.className = "page-item";
-//       var a = document.createElement("a");
-//       a.className = "page-link";
-//       a.href = "#";
-//       a.textContent = i;
-//       if (i === currentPage) {
-//         li.classList.add("active");
-//       }
-//       li.appendChild(a);
-//       pagination.insertBefore(li, nextLi);
-//     }
-//   }
+    // Next Button
+    var nextLi = document.createElement("li");
+    nextLi.className = "page-item";
+    var nextLink = document.createElement("a");
+    nextLink.className = "page-link";
+    nextLink.href = "#";
+    nextLink.textContent = ">";
+    nextLi.appendChild(nextLink);
+    pagination.appendChild(nextLi);
 
-//   function updateActivePagination(clickedPage) {
-//     var paginationItems = document.querySelectorAll("#pagination .page-item");
-//     paginationItems.forEach(function (item) {
-//       item.classList.remove("active");
-//     });
-//     clickedPage.parentNode.classList.add("active");
-//   }
+    for (var i = 1; i <= totalPages; i++) {
+      var li = document.createElement("li");
+      li.className = "page-item";
+      var a = document.createElement("a");
+      a.className = "page-link";
+      a.href = "#";
+      a.textContent = i;
+      if (i === currentPage) {
+        li.classList.add("active");
+      }
+      li.appendChild(a);
+      pagination.insertBefore(li, nextLi);
+    }
+  }
 
-//   // Initial display
-//   displayImages(currentPage);
-//   displayPagination();
+  function updateActivePagination(clickedPage) {
+    var paginationItems = document.querySelectorAll("#pagination .page-item");
+    paginationItems.forEach(function (item) {
+      item.classList.remove("active");
+    });
+    clickedPage.parentNode.classList.add("active");
+  }
 
-//   // Pagination click event
-//   document
-//     .getElementById("pagination")
-//     .addEventListener("click", function (event) {
-//       event.preventDefault();
-//       var target = event.target;
-//       if (target.tagName === "A") {
-//         var targetPage = parseInt(target.textContent);
-//         if (!isNaN(targetPage)) {
-//           currentPage = targetPage;
-//           displayImages(currentPage);
-//           updateActivePagination(target);
-//         } else if (target.textContent === "<") {
-//           if (currentPage > 1) {
-//             currentPage--;
-//             displayImages(currentPage);
-//             updateActivePagination(target);
-//           }
-//         } else if (target.textContent === ">") {
-//           if (currentPage < Math.ceil(churchInfo.length / imagesPerPage)) {
-//             currentPage++;
-//             displayImages(currentPage);
-//             updateActivePagination(target);
-//           }
-//         }
-//       }
-//     });
-// });
+  // Initial display
+  displayImages(currentPage);
+  displayPagination();
+
+  // Pagination click event
+  document
+    .getElementById("pagination")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+      var target = event.target;
+      if (target.tagName === "A") {
+        var targetPage = parseInt(target.textContent);
+        if (!isNaN(targetPage)) {
+          currentPage = targetPage;
+          displayImages(currentPage);
+          updateActivePagination(target);
+        } else if (target.textContent === "<") {
+          if (currentPage > 1) {
+            currentPage--;
+            displayImages(currentPage);
+            updateActivePagination(target);
+          }
+        } else if (target.textContent === ">") {
+          if (currentPage < Math.ceil(churchInfo.length / imagesPerPage)) {
+            currentPage++;
+            displayImages(currentPage);
+            updateActivePagination(target);
+          }
+        }
+      }
+    });
+});
