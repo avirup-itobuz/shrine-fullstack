@@ -2,6 +2,7 @@
 :root {
   --text-grey: #747A82;
   --light-brown: #DDDDDD;
+  --bg-yellow: #F6F2EB;
   --bg-pink: #FFE6E0;
 }
 
@@ -13,9 +14,13 @@
   font-family: "Roboto Serif", serif;
 }
 
+input:focus {
+  outline: none;
+}
+
 p {
   color: var(--text-grey);
-  font-size: 15px;
+  font-size: 14px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -163,6 +168,7 @@ nav {
 }
 .faithful-heart .martin::before {
   content: url("../assets/home/faithfulHeart/quote.svg");
+  margin-right: 10px !important;
   position: relative;
   top: 0;
 }
@@ -215,15 +221,145 @@ nav {
   border: 1px solid black;
 }
 .grow-stronger .image .hand {
-  left: -20%;
-  bottom: -20%;
+  left: -10%;
+  bottom: -10%;
 }
 .grow-stronger .image .girl {
-  height: 600px;
+  height: 500px;
 }
 
+@media (min-width: 1024px) {
+  .grow-stronger .image .girl {
+    position: absolute !important;
+  }
+}
 .members .text .title,
 .members .text .para {
   flex: 1;
+}
+.members .text .title > h2,
+.members .text .para > h2 {
   max-width: 350px;
+}
+.members .text .title > p,
+.members .text .para > p {
+  max-width: 450px;
+}
+.members .crown > img,
+.members .flower > img {
+  max-width: 500px;
+}
+.members .person-img img {
+  border-radius: 150px;
+}
+.members .separator {
+  height: 50px;
+  width: 2px;
+  background-color: var(--light-brown);
+}
+.members .socials {
+  visibility: hidden;
+}
+.members .share {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.members .memberInfo:hover .share {
+  background-color: #C0304F;
+}
+.members .memberInfo:hover .socials {
+  visibility: visible;
+}
+
+.events .text > div {
+  flex: 1;
+}
+.events .eventsWrapper {
+  overflow: scroll;
+}
+.events .eventsWrapper::-webkit-scrollbar {
+  display: none;
+}
+.events .eventsCarousel {
+  transition: 0.8s ease;
+}
+.events .nav-buttons > div {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.events .nav-buttons > div:hover {
+  background-color: #C0304F;
+}
+
+.latest-article .text > div {
+  flex: 1;
+}
+.latest-article .text > div > * {
+  max-width: 400px;
+}
+.latest-article .featured-and-form > div {
+  flex: 1;
+}
+.latest-article .featured-and-form .featured {
+  background-image: url(../assets/home/latestArticle/background.png);
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.latest-article .featured-and-form .featured .featured-text {
+  max-width: 350px;
+  top: 15%;
+  left: 10%;
+}
+
+.pagination > li > a {
+  background-color: white;
+  color: rgb(133, 17, 17);
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+  color: rgb(217, 62, 62);
+  background-color: #eee;
+  border-color: #ddd;
+}
+
+.pagination > .active > a {
+  color: rgb(255, 255, 255);
+  background-color: rgb(133, 17, 17);
+  border: solid 1px rgb(172, 16, 19);
+}
+
+.footer {
+  background-image: url(../assets/home/footer/footer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer .brand .logo {
+  max-width: 200px;
+}
+.footer .brand p {
+  max-width: 420px;
+}
+.footer hr {
+  color: white;
+}
+.footer .footer-content h3 {
+  color: white;
+  font-size: 20px;
+}
+.footer .footer-content p {
+  font-size: 14px;
+}
+.footer .footer-content input {
+  background-color: #2F3032;
+}
+.footer .footer-content button {
+  background-color: #C0304F;
+  color: #2F3032;
 }/*# sourceMappingURL=index.css.map */
