@@ -380,10 +380,11 @@
             <div class="form d-flex flex-column align-items-start gap-3 rounded border border-dark-subtle p-5">
                 <div class="title fs-2 fw-semibold">Subscribe to church</div>
                 <p>A long established fact that a reader will be distracted by the readable.A long.</p>
-                <input type="text" class="border border-dark-subtle p-3 rounded w-75" placeholder="Enter your Email">
-                <button class="bg-dark text-white p-3 border-0 px-5 rounded">SUBSCRIBE</button>
+                <input type="text" class="border border-dark-subtle p-3 rounded w-75" placeholder="Enter your Email"
+                    value="" id="subscribe-email">
+                <button class="bg-dark text-white p-3 border-0 px-5 rounded" id="subscribe-btn">SUBSCRIBE</button>
                 <div class="d-flex align-items-center">
-                    <input type="checkbox" class="" name="" id="">
+                    <input type="checkbox" class="" name="" id="subscribe-validation">
                     <p class="mb-0 ps-2">I agree that my sub minted data is being collected and stored</p>
                 </div>
             </div>
@@ -445,8 +446,8 @@
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam.
                         </p>
-                        <input type="text" placeholder="Enter your email" class="border-0 p-2 rounded w-100" />
-                        <button type="button" class="btn btn-danger p-2 my-2 text-white">
+                        <input type="text" placeholder="Enter your email" class="border-0 p-2 rounded w-100" id="footer-subscribe-email"/>
+                        <button type="button" class="btn btn-danger p-2 my-2 text-white" id="footer-subscribe-btn">
                             SUBSCRIBE
                         </button>
                     </div>
@@ -474,4 +475,5 @@
     <script src="./js/homepage/churches.js" type="module"></script>
     <script src="./js/homepage/events.js" type="module"></script>
     <script src="./js/homepage/members.js" type="module"></script>
+    <script src="./js/homepage/sendmail.js" type="module"></script>
 </body>

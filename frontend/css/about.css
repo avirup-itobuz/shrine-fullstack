@@ -35,7 +35,7 @@ nav {
   translate: 0% 28%;
   background: #fff;
   z-index: 2;
-  background: var(--bg-yellow);
+  opacity: 1;
 }
 
 .nav-text:hover::before {

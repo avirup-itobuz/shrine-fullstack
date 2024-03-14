@@ -31,12 +31,20 @@ events.forEach((event) => {
   ]);
 
   const date = createElement("div", ["d-flex", "gap-2"]);
-  const dateIcon = createElement("img", [], "assets/home/events/calendar.svg");
+  const dateIcon = createElement(
+    "img",
+    [],
+    "http://localhost:8000/assets/home/events/calendar.svg"
+  );
   const dateText = createElement("p", ["text-nowrap", "mb-0"], "", event.date);
   date.append(dateIcon, dateText);
 
   const venue = createElement("div", ["d-flex", "gap-2"]);
-  const venueIcon = createElement("img", [], "assets/home/events/home.svg");
+  const venueIcon = createElement(
+    "img",
+    [],
+    "http://localhost:8000/assets/home/events/home.svg"
+  );
   const venueText = createElement(
     "p",
     ["text-nowrap", "mb-0"],
@@ -46,7 +54,11 @@ events.forEach((event) => {
   venue.append(venueIcon, venueText);
 
   const time = createElement("div", ["d-flex", "gap-2"]);
-  const timeIcon = createElement("img", [], "assets/home/events/clock.svg");
+  const timeIcon = createElement(
+    "img",
+    [],
+    "http://localhost:8000/assets/home/events/clock.svg"
+  );
   const timeText = createElement("p", ["text-nowrap", "mb-0"], "", event.time);
   time.append(timeIcon, timeText);
 

@@ -222,7 +222,7 @@ nav {
     }
 
     .martin::before {
-        content: url("../assets/home/faithfulHeart/quote.svg");
+        content: url(http://localhost:8000/assets/home/faithfulHeart/quote.svg);
         margin-right: 10px !important;
         position: relative;
         top: 0;

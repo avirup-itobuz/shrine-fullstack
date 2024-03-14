@@ -101,3 +101,4 @@ export const churchInfo = [
     smallParagraph: "~2 min read",
   },
 ];
+
