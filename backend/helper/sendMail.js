@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import nodemailer from "nodemailer";
 import Mailgen from "mailgen";
 
@@ -38,7 +40,7 @@ export function sendMail(receiverEmail) {
     secure: false,
     auth: {
       user: "avirup@itobuz.com",
-      pass: "ypyt ygat kbel ynmw",
+      pass: process.env.PASS,
     },
   });
 

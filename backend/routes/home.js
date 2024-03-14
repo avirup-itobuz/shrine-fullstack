@@ -19,10 +19,8 @@ export function getChurchDetails(route) {
 }
 export function sendSubscribtionMail(route) {
   route.post("/sendMail", (req, res) => {
-    console.log(req.body);
     if (EmailValidator.validate(req.body.email)) {
       const reponse = sendMail(req.body.email);
-      console.log(reponse);
       if (reponse) res.send({ satus: "valid" });
       else res.send({ status: "error sending email" });
     } else {
