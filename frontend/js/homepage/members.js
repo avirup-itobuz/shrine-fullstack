@@ -24,7 +24,11 @@ members.forEach((member) => {
     "justify-content-center",
     "align-items-center",
   ]);
-  const shareImg = createElement("img", [], "assets/home/members/share.svg");
+  const shareImg = createElement(
+    "img",
+    [],
+    "http://localhost:8000/assets/home/members/share.svg"
+  );
   share.append(shareImg);
 
   const separator = createElement("div", ["separator"]);
@@ -46,21 +50,21 @@ members.forEach((member) => {
   const instagramIcon = createElement(
     "img",
     [],
-    "assets/home/members/socials/instagram.svg"
+    "http://localhost:8000/assets/home/members/socials/instagram.svg"
   );
   instagram.append(instagramIcon);
   const google = createElement("div");
   const googleIcon = createElement(
     "img",
     [],
-    "assets/home/members/socials/google.svg"
+    "http://localhost:8000/assets/home/members/socials/google.svg"
   );
   google.append(googleIcon);
   const youtube = createElement("div");
   const youtubeIcon = createElement(
     "img",
     [],
-    "assets/home/members/socials/youtube.svg"
+    "http://localhost:8000/assets/home/members/socials/youtube.svg"
   );
   youtube.append(youtubeIcon);
   socialsDiv.append(instagram, google, youtube);

@@ -80,14 +80,12 @@ function displayPagination() {
   // Previous Button
   const prevLi = createElement("li", ["page-item"]);
   const prevLink = createElement("a", ["page-link"], "", "<");
-  prevLink.href = "#";
   prevLi.appendChild(prevLink);
   pagination.appendChild(prevLi);
 
   // Next Button
- const nextLi = createElement("li", ["page-item"]);
- const nextLink = createElement("a", ["page-link"], "", "<");
-  nextLink.href = "#";
+  const nextLi = createElement("li", ["page-item"]);
+  const nextLink = createElement("a", ["page-link"], "", ">");
   nextLi.appendChild(nextLink);
   pagination.appendChild(nextLi);
 

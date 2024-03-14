@@ -304,7 +304,7 @@ nav {
   flex: 1;
 }
 .latest-article .featured-and-form .featured {
-  background-image: url(../assets/home/latestArticle/background.png);
+  background-image: url(http://localhost:8000/assets/home/latestArticle/background.png);
   min-height: 400px;
   background-repeat: no-repeat;
   background-position: center;
@@ -336,7 +336,7 @@ nav {
 }
 
 .footer {
-  background-image: url(../assets/home/footer/footer.png);
+  background-image: url(http://localhost:8000/assets/footer/footer.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
