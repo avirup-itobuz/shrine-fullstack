@@ -3,6 +3,9 @@ import cors from "cors";
 import {
   manageHomeRoute,
   manageAboutRoute,
+  manageFaqRoute,
+  managePastorTeam,
+  manageGalleryRoute,
 } from "./controller/manageRoutes.js";
 
 const app = express();
@@ -14,6 +17,9 @@ app.use("/assets", express.static("assets"));
 
 app.use("/api/homepage", manageHomeRoute());
 app.use("/api/about", manageAboutRoute());
+app.use("/api/pastorTeam", managePastorTeam());
+app.use("/api/faq", manageFaqRoute());
+app.use("/api/gallery", manageGalleryRoute());
 
 app.get("*", (req, res) => {
   res.status(404).send("invalid req");

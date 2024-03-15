@@ -64,85 +64,6 @@ nav {
   right: 0;
 }
 
-.hero .carousel-wrapper {
-  overflow: scroll;
-  transition: 1s ease;
-}
-.hero .carousel-wrapper .carousel {
-  transition: 1s ease;
-}
-.hero .carousel-wrapper .carousel > div {
-  flex-shrink: 0;
-}
-.hero .carousel-wrapper .carousel img {
-  width: 100%;
-  max-height: 400px;
-}
-.hero .buttons {
-  top: 25%;
-  right: 2%;
-}
-.hero .buttons > div {
-  height: 25px;
-  width: 25px;
-  background-color: #C0304F !important;
-}
-.hero .buttons > div img {
-  width: 75%;
-}
-.hero .buttons div:nth-child(1) {
-  border-radius: 5px 5px 0 0;
-  border-bottom: 1px solid white;
-}
-.hero .buttons div:nth-child(2) {
-  border-radius: 0 0 5px 5px;
-}
-.hero .carousel-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .hero .buttons {
-    top: 25%;
-    right: 0;
-  }
-  .hero .buttons > div {
-    height: 50px;
-    width: 50px;
-    background-color: #C0304F !important;
-  }
-}
-.faq > p {
-  max-width: 900px;
-}
-.faq .questions > div {
-  flex: 1;
-}
-
-@media (min-width: 768px) {
-  .faq .questions {
-    gap: 50px;
-  }
-}
-button.accordion-button:focus {
-  color: black;
-  background-color: white;
-  box-shadow: none;
-  outline: none;
-}
-button.accordion-button:focus .index {
-  background-color: #C0304F;
-  color: white;
-}
-
-.index {
-  height: 30px;
-  width: 30px;
-  color: var(--text-grey);
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
-}
-
 .footer {
   background-image: url(http://localhost:8000/assets/footer/footer.png);
   background-repeat: no-repeat;
@@ -170,4 +91,4 @@ button.accordion-button:focus .index {
 .footer .footer-content button {
   background-color: #C0304F;
   color: #2F3032;
-}/*# sourceMappingURL=faq.css.map */
+}/*# sourceMappingURL=gallery.css.map */

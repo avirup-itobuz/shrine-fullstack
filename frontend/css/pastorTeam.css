@@ -64,83 +64,76 @@ nav {
   right: 0;
 }
 
-.hero .carousel-wrapper {
+.guide p {
+  max-width: 900px;
+}
+
+.carousel-section .carousel-wrapper {
   overflow: scroll;
   transition: 1s ease;
 }
-.hero .carousel-wrapper .carousel {
+.carousel-section .carousel-wrapper .carousel {
   transition: 1s ease;
 }
-.hero .carousel-wrapper .carousel > div {
+.carousel-section .carousel-wrapper .carousel > div {
   flex-shrink: 0;
 }
-.hero .carousel-wrapper .carousel img {
+.carousel-section .carousel-wrapper .carousel img {
   width: 100%;
   max-height: 400px;
 }
-.hero .buttons {
+.carousel-section .buttons {
   top: 25%;
   right: 2%;
 }
-.hero .buttons > div {
+.carousel-section .buttons > div {
   height: 25px;
   width: 25px;
   background-color: #C0304F !important;
 }
-.hero .buttons > div img {
+.carousel-section .buttons > div img {
   width: 75%;
 }
-.hero .buttons div:nth-child(1) {
+.carousel-section .buttons div:nth-child(1) {
   border-radius: 5px 5px 0 0;
   border-bottom: 1px solid white;
 }
-.hero .buttons div:nth-child(2) {
+.carousel-section .buttons div:nth-child(2) {
   border-radius: 0 0 5px 5px;
 }
-.hero .carousel-wrapper::-webkit-scrollbar {
+.carousel-section .carousel-wrapper::-webkit-scrollbar {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .hero .buttons {
+  .carousel-section .buttons {
     top: 25%;
     right: 0;
   }
-  .hero .buttons > div {
+  .carousel-section .buttons > div {
     height: 50px;
     width: 50px;
     background-color: #C0304F !important;
   }
 }
-.faq > p {
-  max-width: 900px;
+#members-div .separator {
+  height: 50px;
+  width: 2px;
+  background-color: var(--light-brown);
 }
-.faq .questions > div {
-  flex: 1;
+#members-div .socials {
+  visibility: hidden;
 }
-
-@media (min-width: 768px) {
-  .faq .questions {
-    gap: 50px;
-  }
+#members-div .share {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
 }
-button.accordion-button:focus {
-  color: black;
-  background-color: white;
-  box-shadow: none;
-  outline: none;
-}
-button.accordion-button:focus .index {
+#members-div .memberInfo:hover .share {
   background-color: #C0304F;
-  color: white;
 }
-
-.index {
-  height: 30px;
-  width: 30px;
-  color: var(--text-grey);
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
+#members-div .memberInfo:hover .socials {
+  visibility: visible;
 }
 
 .footer {
@@ -170,4 +163,4 @@ button.accordion-button:focus .index {
 .footer .footer-content button {
   background-color: #C0304F;
   color: #2F3032;
-}/*# sourceMappingURL=faq.css.map */
+}/*# sourceMappingURL=pastorTeam.css.map */

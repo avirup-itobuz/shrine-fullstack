@@ -71,8 +71,15 @@ nav {
     }
 }
 
-//hero
-.hero {
+//guide
+.guide {
+    p {
+        max-width: 900px;
+    }
+}
+
+
+.carousel-section {
     .carousel-wrapper {
         overflow: scroll;
         // max-width: 1024px;
@@ -123,7 +130,7 @@ nav {
 }
 
 @media (min-width:768px) {
-    .hero {
+    .carousel-section {
         .buttons {
             // right: -10%;
             top: 25%;
@@ -138,45 +145,37 @@ nav {
     }
 }
 
-//faq
-.faq {
-    &>p {
-        max-width: 900px;
+//members
+
+#members-div {
+    .separator {
+        height: 50px;
+        width: 2px;
+        background-color: var(--light-brown);
     }
 
-    .questions {
-        &>div {
-            flex: 1;
+    .socials {
+        visibility: hidden;
+    }
+
+    .share {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .memberInfo:hover {
+        .share {
+            background-color: #C0304F;
+        }
+
+        .socials {
+            visibility: visible;
         }
     }
-}
 
-@media (min-width:768px) {
-    .faq {
-        .questions {
-            gap: 50px;
-        }
-    }
-}
 
-button.accordion-button:focus {
-    color: black;
-    background-color: white;
-    box-shadow: none;
-    outline: none;
 
-    .index {
-        background-color: #C0304F;
-        color: white;
-    }
-}
-
-.index {
-    height: 30px;
-    width: 30px;
-    color: var(--text-grey);
-    font-size: 15px;
-    font-family: "Poppins", sans-serif;
 }
 
 //footer

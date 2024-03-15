@@ -1,0 +1,55 @@
+export const carousel = [
+  "http://localhost:8000/assets/pastorTeam/banner.png",
+  "http://localhost:8000/assets/pastorTeam/banner.png",
+  "http://localhost:8000/assets/pastorTeam/banner.png",
+];
+export const members = [
+  {
+    name: "Gerry Serrano",
+    smallName: "Sir Gerry Serrano",
+    link: "http://localhost:8000/assets/pastorTeam/alex.png",
+    instagram: "https://www.instagram.com/",
+    google: "https://www.google.com/",
+    youtube: "https://www.youtube.com/",
+  },
+  {
+    name: "Gerry Serrano",
+    smallName: "Sir Gerry Serrano",
+    link: "http://localhost:8000/assets/pastorTeam/henry.png",
+    instagram: "https://www.instagram.com/",
+    google: "https://www.google.com/",
+    youtube: "https://www.youtube.com/",
+  },
+  {
+    name: "Gerry Serrano",
+    smallName: "Sir Gerry Serrano",
+    link: "http://localhost:8000/assets/pastorTeam/john.png",
+    instagram: "https://www.instagram.com/",
+    google: "https://www.google.com/",
+    youtube: "https://www.youtube.com/",
+  },
+  {
+    name: "Gerry Serrano",
+    smallName: "Sir Gerry Serrano",
+    link: "http://localhost:8000/assets/pastorTeam/kevin.png",
+    instagram: "https://www.instagram.com/",
+    google: "https://www.google.com/",
+    youtube: "https://www.youtube.com/",
+  },
+  {
+    name: "Gerry Serrano",
+    smallName: "Sir Gerry Serrano",
+    link: "http://localhost:8000/assets/pastorTeam/shawn.png",
+    instagram: "https://www.instagram.com/",
+    google: "https://www.google.com/",
+    youtube: "https://www.youtube.com/",
+  },
+  {
+    name: "Gerry Serrano",
+    smallName: "Sir Gerry Serrano",
+    link: "http://localhost:8000/assets/pastorTeam/taylor.png",
+    instagram: "https://www.instagram.com/",
+    google: "https://www.google.com/",
+    youtube: "https://www.youtube.com/",
+  },
+];

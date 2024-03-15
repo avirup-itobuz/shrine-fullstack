@@ -7,6 +7,11 @@
     --bg-pink: #FFE6E0;
 }
 
+a {
+    text-decoration: none !important;
+    color: var(--text-grey) !important;
+}
+
 .border-left-red {
     border-left: 5px solid rgb(184, 10, 10);
 }

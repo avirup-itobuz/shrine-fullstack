@@ -40,7 +40,7 @@ export function sendMail(receiverEmail) {
     secure: false,
     auth: {
       user: "avirup@itobuz.com",
-      pass: process.env.PASS,
+      pass: process.env.pass,
     },
   });
 
