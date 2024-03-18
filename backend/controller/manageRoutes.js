@@ -11,8 +11,9 @@ import {
   getPastorCarouselData,
   getPastorTeamData,
 } from "../routes/pastorTeam.js";
-import { getHeroImages, getGalleryImages } from "../routes/gallery.js";
-import {} from "../routes/videos.js";
+import { getGalleryHeroImages, getGalleryImages } from "../routes/gallery.js";
+import { getVideoHeroImages, getVideos } from "../routes/videos.js";
+import { getEventsHeroData, getEvents } from "../routes/events.js";
 
 export function manageHomeRoute() {
   const route = Router();
@@ -46,14 +47,21 @@ export function managePastorTeam() {
 
 export function manageGalleryRoute() {
   const route = Router();
-  getHeroImages(route);
+  getGalleryHeroImages(route);
   getGalleryImages(route);
   return route;
 }
 
 export function manageVideoRoute() {
   const route = Router();
-  // getHeroImages(route);
-  // getVideos(route);
+  getVideoHeroImages(route);
+  getVideos(route);
+  return route;
+}
+
+export function manageEventsPageRoute() {
+  const route = Router();
+  getEventsHeroData(route);
+  getEvents(route);
   return route;
 }

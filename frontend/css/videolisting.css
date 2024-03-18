@@ -64,6 +64,10 @@ nav {
   right: 0;
 }
 
+.videos {
+  max-width: 1024px;
+}
+
 .footer {
   background-image: url(http://localhost:8000/assets/footer/footer.png);
   background-repeat: no-repeat;

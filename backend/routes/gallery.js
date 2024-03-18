@@ -1,6 +1,6 @@
 import { allImages, heroImagesData } from "../data/gallery.js";
 
-export function getHeroImages(route) {
+export function getGalleryHeroImages(route) {
   route.get("/hero", (req, res) => {
     res.status(200).json(heroImagesData);
   });

@@ -3,17 +3,6 @@ import { accoridonFaq } from "../helper/constants.js";
 const accordionFAQs = await getData(accoridonFaq);
 
 function generateAccordionItem(index, title, subtitle) {
-  //   return `<div class="accordion-item my-3 border-start-0 border-top-0  border-end-0  ">
-  //   <h2 class="accordion-header ">
-  //     <button class="accordion-button heading-family "  type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${index}" aria-expanded="true" aria-controls="collapse-${index}">
-  //       <div class= "accordion-index px-3 py-2 me-3 ">${index}</div> ${title}
-  //     </button>
-  //   </h2>
-  //   <div id="collapse-${index}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-  //     <div class="accordion-body content-family"> ${subtitle}
-  //     </div>
-  //   </div>
-  // </div>`;
   return `<div class="accordion-item my-4">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed fw-semibold fs-5" type="button" data-bs-toggle="collapse"
