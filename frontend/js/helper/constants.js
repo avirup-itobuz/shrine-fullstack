@@ -26,8 +26,8 @@ export const videosHero = "http://localhost:8000/api/videolisting/hero";
 export const videosListing = "http://localhost:8000/api/videolisting/videos";
 
 //events
-export const allEventsData = "http://localhost:8000/api/events/events";
+export const allEventsData = "http://localhost:8000/api/events/allevents";
 export const eventsHero = "http://localhost:8000/api/events/hero";
 
 //eventDetails
-export const eventDetails = "";
+export const eventDetails = "http://localhost:8000/api/events/events/";

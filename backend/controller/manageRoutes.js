@@ -13,7 +13,7 @@ import {
 } from "../routes/pastorTeam.js";
 import { getGalleryHeroImages, getGalleryImages } from "../routes/gallery.js";
 import { getVideoHeroImages, getVideos } from "../routes/videos.js";
-import { getEventsHeroData, getEvents } from "../routes/events.js";
+import { getEventsHeroData, getEvents, getOneEvent } from "../routes/events.js";
 
 export function manageHomeRoute() {
   const route = Router();
@@ -63,5 +63,6 @@ export function manageEventsPageRoute() {
   const route = Router();
   getEventsHeroData(route);
   getEvents(route);
+  getOneEvent(route);
   return route;
 }

@@ -65,6 +65,10 @@ nav {
   right: 0;
 }
 
+#map {
+  height: 500px;
+}
+
 .footer {
   background-image: url(http://localhost:8000/assets/footer/footer.png);
   background-repeat: no-repeat;
