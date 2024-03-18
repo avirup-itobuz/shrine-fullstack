@@ -84,7 +84,7 @@ export const events = [
     timeDuration: "6:00 pm -12:00 pm",
     location: "Kingdom Church",
     slogan: "Where Faith Finds Hope, Bounds Church",
-    title: "Together in Faith, United in Love.",
+    title: "Growing Together in God’s Word.",
     subtitle:
       "long established fact that a reader will be distracted by the readable",
     img: "http://localhost:8000/assets/events/eventsImages/sun.png",
@@ -108,7 +108,7 @@ export const events = [
     timeDuration: "6:00 pm -12:00 pm",
     location: "Kingdom Church",
     slogan: "Where Faith Finds Hope, Bounds Church",
-    title: "Together in Faith, United in Love.",
+    title: "Living by Faith, Guided by Grace.",
     subtitle:
       "long established fact that a reader will be distracted by the readable",
     img: "http://localhost:8000/assets/events/eventsImages/jesus.png",
@@ -132,7 +132,7 @@ export const events = [
     timeDuration: "6:00 pm -12:00 pm",
     location: "Kingdom Church",
     slogan: "Where Faith Finds Hope, Bounds Church",
-    title: "Together in Faith, United in Love.",
+    title: "Walking Together, Growing in Faith.",
     subtitle:
       "long established fact that a reader will be distracted by the readable",
     img: "http://localhost:8000/assets/events/eventsImages/father-nun.png",
