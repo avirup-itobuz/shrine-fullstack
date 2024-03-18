@@ -12,7 +12,13 @@ export const happyPrayersCount = "http://localhost:8000/api/about/happyprayers";
 export const faqCarousel = "http://localhost:8000/api/faq/carousel";
 export const accoridonFaq = "http://localhost:8000/api/faq/accordionfaq";
 
+//gallery
+export const galleryHero = "http://localhost:8000/api/gallery/hero";
+export const galleryImages = "http://localhost:8000/api/gallery/images";
+
 //pastorteam
 export const pastorTeamCarousel =
   "http://localhost:8000/api/pastorteam/carousel";
 export const pastorTeamData = "http://localhost:8000/api/pastorteam/members";
+
+//videolisting

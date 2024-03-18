@@ -29,6 +29,7 @@ p {
   color: var(--text-grey);
   font-size: 14px;
   font-family: "Poppins", sans-serif;
+  max-width: 900px;
 }
 
 .nav,

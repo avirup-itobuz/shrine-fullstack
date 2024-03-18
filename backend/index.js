@@ -6,6 +6,7 @@ import {
   manageFaqRoute,
   managePastorTeam,
   manageGalleryRoute,
+  manageVideoRoute,
 } from "./controller/manageRoutes.js";
 
 const app = express();
@@ -20,6 +21,7 @@ app.use("/api/about", manageAboutRoute());
 app.use("/api/pastorTeam", managePastorTeam());
 app.use("/api/faq", manageFaqRoute());
 app.use("/api/gallery", manageGalleryRoute());
+app.use("/api/videolisting", manageVideoRoute());
 
 app.get("*", (req, res) => {
   res.status(404).send("invalid req");

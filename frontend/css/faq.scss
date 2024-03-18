@@ -159,17 +159,24 @@ nav {
     }
 }
 
-button.accordion-button:focus {
-    color: black;
-    background-color: white;
-    box-shadow: none;
-    outline: none;
 
-    .index {
-        background-color: #C0304F;
-        color: white;
-    }
+.accordion-button:not(.collapsed) {
+    background-color: white !important;
+    color: black !important;
 }
+
+
+button.accordion-button {
+
+    &:focus {
+        color: black;
+        background-color: white;
+        box-shadow: none;
+        outline: none;
+    }
+
+}
+
 
 .index {
     height: 30px;
@@ -178,6 +185,14 @@ button.accordion-button:focus {
     font-size: 15px;
     font-family: "Poppins", sans-serif;
 }
+
+.accordion-button:hover {
+    .index {
+        background-color: #C0304F;
+        color: white;
+    }
+}
+
 
 //footer
 .footer {
